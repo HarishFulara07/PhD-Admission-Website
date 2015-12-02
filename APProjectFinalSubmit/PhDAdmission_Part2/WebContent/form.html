@@ -1,0 +1,1570 @@
+<!--
+
+/*
+ * @author
+ * 
+ * Harish Fulara(2014143)
+ * Anant Mittal(2014015)
+ */
+
+-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"> </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+	<link rel="stylesheet" href="form.css">
+	<style type="text/css">
+		#form1 .has-error .control-label,
+		#form1 .has-error .help-block,
+		#form1 .has-error .form-control-feedback {
+			color: #8B0000;
+		}
+
+		#form1 .has-success .control-label,
+		#form1 .has-success .help-block,
+		#form1 .has-success .form-control-feedback {
+			color: #006400;
+		}
+
+		#form2 .has-error .control-label,
+		#form2 .has-error .help-block,
+		#form2 .has-error .form-control-feedback {
+			color: #8B0000;
+		}
+
+		#form2 .has-success .control-label,
+		#form2 .has-success .help-block,
+		#form2 .has-success .form-control-feedback {
+			color: #006400;
+		}
+	</style>
+	<title>
+		PhD Admission - Form
+	</title>
+</head>
+<body>
+	<div class="nav">
+		<div class="container" id="custom-link">
+			<a href="https://www.iiitd.ac.in/"><img class="pull-left" src="iiitd-logo.jpg" /></a>
+			<ul class="pull-right">
+				<li><a href="https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost:8080/PhDAdmission_Part2/main_page_user.html">Log Out</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="container">
+		<h2 style="color: black; text-decoration: underline">Admission Form</h2>
+		<ul class="nav nav-tabs" id="h">
+			<li class="active"><a data-toggle="tab" href="#pd">Personal Information</a></li>
+			<li><a data-toggle="tab" href="#ei">Education Information</a></li>
+			<li><a data-toggle="tab" href="#up1">Upload CV/Resume</a></li>
+			<li><a data-toggle="tab" href="#up2">Upload SOP</a></li>
+			<li><a data-toggle="tab" href="#sub">Submit</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="pd" class="tab-pane fade in active">
+				<div class = "container">
+					<div class = "form-design">
+						<p> Note: Fields marked as * are mandatory.</p>
+						<form class="form-horizontal" role="form" id="form1" action="Form1" method="POST">
+							<div class="form-group">
+								<label class="control-label col-sm-2">Email* </label>
+								<div class="col-sm-5">
+									<input type="email" class="form-control" name="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Name* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Address of Correspondence* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="c_addr1">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2"></label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="c_addr2">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2"></label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="c_addr3">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Mobile* </label>
+								<div class="col-sm-5"> 
+									<input type="text" class="form-control" name="mobile">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">PhD Stream* </label>
+								<div class="col-sm-5">
+									<label><input type="radio" name="stream" value="Computer Science">Computer Science</label>
+									<br>
+									<label><input type="radio" name="stream" value="Electronics and Communication">Electronics and Communication</label>
+									<br>
+									<label><input type="radio" name="stream" value="Computational Biology">Computational Biology</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">PhD Area Preference 1* </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="pref1">
+										<option value="">Select your PhD Area Preference - Mandatory</option>
+										<option value="Artificial Intelligence and Robotics">Artificial Intelligence and Robotics</option>
+										<option value="Compilers">Compilers</option>
+										<option value="Computer Architecture and System Design">Computer Architecture and System Design</option>
+										<option value="Computer Graphics">Computer Graphics</option>
+										<option value="Controls and Robotics">Controls and Robotics</option>
+										<option value="Digital and Analog VLSI Systems Design">Digital and Analog VLSI Systems Design</option>
+										<option value="Electromagnetics">Electromagnetics</option>
+										<option value="Embedded and VLSI Systems Design">Embedded and VLSI Systems Design</option>
+										<option value="Biophysics">Biophysics</option>
+										<option value="Structural Biology">Structural Biology</option>
+										<option value="Systems Biology">Systems Biology</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">PhD Area Preference 2 </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="pref2">
+										<option value="">Select your PhD Area Preference - Optional</option>
+										<option value="Artificial Intelligence and Robotics">Artificial Intelligence and Robotics</option>
+										<option value="Compilers">Compilers</option>
+										<option value="Computer Architecture and System Design">Computer Architecture and System Design</option>
+										<option value="Computer Graphics">Computer Graphics</option>
+										<option value="Controls and Robotics">Controls and Robotics</option>
+										<option value="Digital and Analog VLSI Systems Design">Digital and Analog VLSI Systems Design</option>
+										<option value="Electromagnetics">Electromagnetics</option>
+										<option value="Embedded and VLSI Systems Design">Embedded and VLSI Systems Design</option>
+										<option value="Biophysics">Biophysics</option>
+										<option value="Structural Biology">Structural Biology</option>
+										<option value="Systems Biology">Systems Biology</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">PhD Area Preference 3 </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="pref3">
+										<option value="">Select your PhD Area Preference - Optional</option>
+										<option value="Artificial Intelligence and Robotics">Artificial Intelligence and Robotics</option>
+										<option value="Compilers">Compilers</option>
+										<option value="Computer Architecture and System Design">Computer Architecture and System Design</option>
+										<option value="Computer Graphics">Computer Graphics</option>
+										<option value="Controls and Robotics">Controls and Robotics</option>
+										<option value="Digital and Analog VLSI Systems Design">Digital and Analog VLSI Systems Design</option>
+										<option value="Electromagnetics">Electromagnetics</option>
+										<option value="Embedded and VLSI Systems Design">Embedded and VLSI Systems Design</option>
+										<option value="Biophysics">Biophysics</option>
+										<option value="Structural Biology">Structural Biology</option>
+										<option value="Systems Biology">Systems Biology</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Gender* </label>
+								<div class="col-sm-5">
+									<label><input type="radio" name="gender" value="Male">Male</label>
+									<br>
+									<label><input type="radio" name="gender" value="Female">Female</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Category* </label>
+								<div class="col-sm-5">
+									<label><input type="radio" name="category" value="General">General</label>
+									<br>
+									<label><input type="radio" name="category" value="SC">SC</label>
+									<br>
+									<label><input type="radio" name="category" value="ST">ST</label>
+									<br>
+									<label><input type="radio" name="category" value="OBC">OBC</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Physically Disabled* </label>
+								<div class="col-sm-5">
+									<label><input type="radio" name="pd" value="Yes">Yes</label>
+									<br>
+									<label><input type="radio" name="pd" value="No">No</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Date of Birth* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="dob" placeholder="MM/DD/YYYY">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Children/War Widows of Defence Personnel killed/Disabled in Action* </label>
+								<div class="col-sm-5">
+									<label><input type="radio" name="war" value="Yes">Yes</label>
+									<br>
+									<label><input type="radio" name="war" value="No">No</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Father's Name* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="father_name">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Nationality* </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="nationality">
+										<option value="">Choose your Nationality</option>
+										<option value="Afghan">Afghan</option>
+										<option value="Albenian">Albenian</option>
+										<option value="Beligian">Beligian</option>
+										<option value="British">British</option>
+										<option value="Canadian">Canadian</option>
+										<option value="German">German</option>
+										<option value="Indian">Indian</option>
+										<option value="Iranian">Iranian</option>
+										<option value="Nigerian">Nigerian</option>
+										<option value="Russian">Russian</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Permanent Address* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="p_addr1">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2"></label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="p_addr2">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2"></label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="p_addr3">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Pin Code* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="pin" id="Pin">
+								</div>
+							</div>
+							<div class="form-group"> 
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="button" class="btn btn-default" id="pdSubmit">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="ei" class="tab-pane fade">
+				<div class = "container">
+					<div class = "form-design-1">
+						<p> Note: Fields marked as * are mandatory.</p>
+						<form class="form-horizontal" role="form" id="form2" action="Form2" method="POST">
+							<h2> Schooling Information </h2>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Xth Board* </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="xboard">
+										<option value="">Select your Xth Board</option>
+										<option value="Andhra Pradesh Board of Education">Andhra Pradesh Board of Intermediate Education</option>
+										<option value="Bihar School Board">Bihar School Examination Board</option>
+										<option value="Central Board of Secondary Education">Central Board of Secondary Education</option>
+										<option value="Jharkhand School Board">Jharkhand School Board</option>
+										<option value="Rajasthan Board of Secondary Education">Rajasthan Board of Secondary Education</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Xth Marks (CGPA)* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="xmark1">
+								</div>
+							</div>
+							<div class="form-group" id="or">&mdash; OR &mdash;</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Xth Marks (%)* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="xmark2">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Year of Passing Xth* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="xyear" placeholder="YYYY">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">XIIth Board* </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="xiiboard" >
+										<option value="">Select your XII Board</option>
+										<option value="Andhra Pradesh Board of Education">Andhra Pradesh Board of Intermediate Education</option>
+										<option value="Bihar School Board">Bihar School Examination Board</option>
+										<option value="Central Board of Secondary Education">Central Board of Secondary Education</option>
+										<option value="Jharkhand School Board">Jharkhand School Board</option>
+										<option value="Rajasthan Board of Secondary Education">Rajasthan Board of Secondary Education</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">XIIth Marks (%)* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="xiimark" placeholder="YYYY">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Year of Passing XIIth* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="xiiyear">
+								</div>
+							</div>	
+							<h2> Graduation Information </h2>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Degree* </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="degree">
+										<option value="">Select Bachelor Degree</option>
+										<option value="BTech (Bachelor of Technology)">BTech (Bachelor of Technology)</option>
+										<option value="BE (Bachelor of Engineering)">BE (Bachelor of Engineering)</option>
+										<option value="B.Sc (Bachelor of Science)">B.Sc (Bachelor of Science)</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Discipline* </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="discipline">
+										<option value="">Select Discipline</option>
+										<option value="Computer Science">Computer Science</option>
+										<option value="Information Technology">Information Technology</option>
+										<option value="Electronic and Communication">Electronic and Communication</option>
+										<option value="Electrical">Electrical</option>
+										<option value="Electronics and Electrical">Electronics and Electrical</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Name of College* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="collegename">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Name of University* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="universityname">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">City* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="collegecity">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">State* </label>
+								<div class="col-sm-5">
+									<select class="form-control" name="gradstate">
+										<option value="">Select State</option>
+										<option value="Andhra Pradesh">Andhra Pradesh</option>
+										<option value="Bihar">Bihar</option>
+										<option value="Gujarat">Gujarat</option>
+										<option value="New Delhi">New Delhi</option>
+										<option value="Other">Other</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Year of Graduation* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="gradyear" placeholder="YYYY">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Marks (CGPA)* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="gradmark1">
+								</div>
+							</div>
+							<div class="form-group" id="or">&mdash; OR &mdash;</div>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Marks (%)* </label>
+								<div class="col-sm-5">
+									<input type="text" class="form-control" name="gradmark2">
+								</div>
+							</div>
+							<div class="panel-group" id="accordion">
+								<div class="panel panel-default" id="form-exp">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<input type="checkbox" class="choice1" value="1" name="info1"> Are you applying for ECE PhD?
+										</h4>
+									</div>
+									<div id="check1" class="panel-collapse collapse out">
+										<div class="panel-body">
+											ECE PhD Subject Preference
+										</div>
+
+										<div class="form-group">
+											<label class="control-label col-sm-2">Preference 1* </label>
+											<div class="col-sm-5">
+												<select class="form-control" name="ece_pref1">
+													<option value=''>Preference 1 : Mandatory</option>
+													<option value="Digital Communications">Digital Communications</option>
+													<option value="Embedded Systems">Embedded Systems</option>
+													<option value="Antenna and Propagation">Antenna and Propagation</option>
+													<option value="RF Circuit Design">RF Circuit Design</option>
+													<option value="Analog CMOS Design">Analog CMOS Design</option>
+													<option value="Digital VLSI Design">Digital VLSI Design</option>
+													<option value="Statistical Signal Processing">Statistical Signal Processing</option>
+													<option value="Advanced Signal Processing">Advanced Signal Processing</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Preference 2* </label>
+											<div class="col-sm-5">
+												<select class="form-control" name="ece_pref2">
+													<option value="">Preference 2 : Mandatory</option>
+													<option value="Digital Communications">Digital Communications</option>
+													<option value="Embedded Systems">Embedded Systems</option>
+													<option value="Antenna and Propagation">Antenna and Propagation</option>
+													<option value="RF Circuit Design">RF Circuit Design</option>
+													<option value="Analog CMOS Design">Analog CMOS Design</option>
+													<option value="Digital VLSI Design">Digital VLSI Design</option>
+													<option value="Statistical Signal Processing">Statistical Signal Processing</option>
+													<option value="Advanced Signal Processing">Advanced Signal Processing</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Preference 3* </label>
+											<div class="col-sm-5">
+												<select class="form-control" name="ece_pref3">
+													<option value="">Preference 3 : Mandatory</option>
+													<option value="Digital Communications">Digital Communications</option>
+													<option value="Embedded Systems">Embedded Systems</option>
+													<option value="Antenna and Propagation">Antenna and Propagation</option>
+													<option value="RF Circuit Design">RF Circuit Design</option>
+													<option value="Analog CMOS Design">Analog CMOS Design</option>
+													<option value="Digital VLSI Design">Digital VLSI Design</option>
+													<option value="Statistical Signal Processing">Statistical Signal Processing</option>
+													<option value="Advanced Signal Processing">Advanced Signal Processing</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Preference 4 </label>
+											<div class="col-sm-5">
+												<select class="form-control" name="ece_pref4">
+													<option value="">Preference 4 : Optional</option>
+													<option value="Digital Communications">Digital Communications</option>
+													<option value="Embedded Systems">Embedded Systems</option>
+													<option value="Antenna and Propagation">Antenna and Propagation</option>
+													<option value="RF Circuit Design">RF Circuit Design</option>
+													<option value="Analog CMOS Design">Analog CMOS Design</option>
+													<option value="Digital VLSI Design">Digital VLSI Design</option>
+													<option value="Statistical Signal Processing">Statistical Signal Processing</option>
+													<option value="Advanced Signal Processing">Advanced Signal Processing</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default" id="form-exp">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<input type="checkbox" class="choice2" value="2" name="info2"> Have you completed your Post Graduation?
+										</h4>
+									</div>
+									<div id="check2" class="panel-collapse collapse out">
+										<div class="panel-body">
+											Post - Graduation Information
+										</div>
+
+										<div class="form-group">
+											<label class="control-label col-sm-2">Name of College* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="pgcollege">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">City* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="pgcity">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">State* </label>
+											<div class="col-sm-5">
+												<select class="form-control" name="pgstate">
+													<option value="">Select State</option>
+													<option value="Andhra Pradesh">Andhra Pradesh</option>
+													<option value="Bihar">Bihar</option>
+													<option value="Gujarat">Gujarat</option>
+													<option value="New Delhi">New Delhi</option>
+													<option value="Other">Other</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Discipline* </label>
+											<div class="col-sm-5">
+												<select class="form-control" name="pgdiscipline">
+													<option value="">Select Post Graduation Discipline</option>
+													<option value="Computer Science">Computer Science</option>
+													<option value="Information Technology">Information Technology</option>
+													<option value="Electronic and Communication">Electronic and Communication</option>
+													<option value="Electrical">Electrical</option>
+													<option value="Electronics and Electrical">Electronics and Electrical</option>
+													<option value="Other">Other</option>
+
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Degree* </label>
+											<div class="col-sm-5">
+												<select class="form-control" name="pgdegree">
+													<option value="">Select Post Graduation Degree</option>
+													<option value="MTech (Master of Technology)">MTech (Master of Technology)</option>
+													<option value="ME (Master of Engineering)">ME (Master of Engineering)</option>
+													<option value="M.Sc (Master of Science)">M.Sc (Master of Science)</option>
+													<option value="MS (Master of Science)">MS (Master of Science)</option>
+													<option value="Other">Other</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Thesis Title* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="pgthesis">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Year of Graduation* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="pgyear" placeholder="YYYY">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Marks (CGPA)* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="pgmark1">
+											</div>
+										</div>
+										<div class="form-group" id="or">&mdash; OR &mdash;</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Marks (%)* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="pgmark2">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel panel-default" id="form-exp">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<input type="checkbox" class="choice3" value="3" name="info3"> Other Academic Degree?
+										</h4>
+									</div>
+									<div id="check3" class="panel-collapse collapse out">
+										<div class="panel-body">
+											Other Academic Degree
+										</div>
+
+										<div class="form-group">
+											<label class="control-label col-sm-2">Exam Name* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="otherexam">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Subject* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="othersubject">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Year* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="otheryear" placeholder="YYYY">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Score* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="otherscore">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Rank </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="otherrank">
+											</div>
+										</div>
+
+									</div>
+								</div>
+								<div class="panel panel-default" id="form-exp">
+									<div class="panel-heading">
+										<h4 class="panel-title">
+											<input type="checkbox" class="choice4" value="4" name="info4"> Taken Gate Exam?
+										</h4>
+									</div>
+									<div id="check4" class="panel-collapse collapse out">
+										<div class="panel-body">
+											Gate Information
+										</div>
+
+										<div class="form-group">
+											<label class="control-label col-sm-2">Area* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="gatearea">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Year* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="gateyear" placeholder="YYYY">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Marks(Out of 100)* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="gatemark">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Score* </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="gatescore">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="control-label col-sm-2">Rank </label>
+											<div class="col-sm-5">
+												<input type="text" class="form-control" name="gaterank">
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<h2> Achievements </h2>
+							<div class="form-group">
+								<label class="control-label col-sm-2">Achievements </label>
+								<div class="col-sm-5">
+									<textarea rows="5" class="form-control" name="achievement">
+									</textarea>
+								</div>
+							</div>
+							<div class="form-group"> 
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="button" class="btn btn-default" id="eiSubmit">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="up1" class="tab-pane fade">
+				<div class = "container">
+					<div class = "form-design-1">
+						<p> Note: CV/Resume should be in PDF format. Maximum size limit is 10 MB.</p>
+						<form class="form-horizontal" role="form" id="form4" action="UploadCV" method="POST" enctype="multipart/form-data">
+							<div class="form-group">
+								<label class="control-label col-sm-2">CV/Resume* </label>
+								<div class="col-sm-5">
+									<input type="file" class="form-control" id="cv" name="file1" accept=".pdf">
+								</div>
+							</div>
+							<div class="form-group"> 
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-default" id="cvUpload">Upload</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="up2" class="tab-pane fade">
+				<div class = "container">
+					<div class = "form-design-1">
+						<p> Note: Statement of Purpose should be in PDF format. Maximum size limit is 10 MB.</p>
+						<form class="form-horizontal" role="form" id="form5" action="UploadSOP" method="POST" enctype="multipart/form-data">
+							<div class="form-group">
+								<label class="control-label col-sm-2">Statement of Purpose* </label>
+								<div class="col-sm-5">
+									<input type="file" class="form-control" id="sop" name="file2" accept=".pdf">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button type="submit" class="btn btn-default" id="sopUpload">Upload</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="sub" class="tab-pane fade">
+				<div class = "container">
+					<div class = "form-design-1">
+						<p> Note: This is the final submit.</p>
+						<p> Note: Please check all your form data. Once you have submitted you will not be able to edit any field.<p>
+							<form class="form-horizontal" role="form" id="form3" action="Form3" method="POST">
+								<div class="form-group"> 
+									<div class="col-sm-offset-2 col-sm-10">
+										<button type="submit" class="btn btn-default" id="finalSubmit" disabled="disabled">Final Submit</button>
+									</div>
+								</div>
+							</form>
+							<p>Note: Submit button will appear only after all the previous tabs are successfully filled.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(document).ready(function() {
+
+				$('#form1').bootstrapValidator({
+					feedbackIcons: {
+						valid: 'glyphicon glyphicon-ok',
+						invalid: 'glyphicon glyphicon-remove',
+						validating: 'glyphicon glyphicon-refresh'
+					},
+					row: {
+						valid: 'field-success',
+						invalid: 'field-error'
+					},
+					fields: {
+						name: {
+							validators: {
+								notEmpty: {
+									message: 'The full name is required and cannot be empty'
+								}
+							}
+						},
+						email: {
+							validators: {
+								notEmpty: {
+									message: 'The email address is required and cannot be empty'
+								},
+								emailAddress: {
+									message: 'The email address is not valid'
+								}
+							}
+						},
+						c_addr1: {
+							validators: {
+								notEmpty: {
+									message: 'The Correspondence address is required and cannot be empty'
+								}
+							}
+						},
+						mobile: {
+							validators: {
+								notEmpty: {
+									message: 'The mobile number is required and cannot be empty'
+								},
+								stringLength: {
+									min: 10,
+									max: 10,
+									message: 'The mobile number must be of exact 10 digits'
+								},
+								regexp: {
+									regexp: /^[0-9]+$/,
+									message: 'The mobile can only consist of digits from 0-9'
+								}
+							}
+						},
+						stream: {
+							validators: {
+								notEmpty: {
+									message: 'The Stream is required and cannot be empty'
+								}
+							}
+						},
+						pref1: {
+							validators: {
+								notEmpty: {
+									message: 'The Preference is required and cannot be empty'
+								}
+							}
+						},
+						gender: {
+							validators: {
+								notEmpty: {
+									message: 'The Gender is required and cannot be empty'
+								}
+							}
+						},
+						category: {
+							validators: {
+								notEmpty: {
+									message: 'The Category is required and cannot be empty'
+								}
+							}
+						},
+						pd: {
+							validators: {
+								notEmpty: {
+									message: 'The Information is required and cannot be empty'
+								}
+							}
+						},
+						war: {
+							validators: {
+								notEmpty: {
+									message: 'The Information is required and cannot be empty'
+								}
+							}
+						},
+						father_name: {
+							validators: {
+								notEmpty: {
+									message: 'The Father\'s name is required and cannot be empty'
+								}
+							}
+						},
+						nationality: {
+							validators: {
+								notEmpty: {
+									message: 'The Nationality is required and cannot be empty'
+								}
+							}
+						},
+						p_addr1: {
+							validators: {
+								notEmpty: {
+									message: 'The Permanent Address is required and cannot be empty'
+								}
+							}
+						},
+						pin: {
+							validators: {
+								notEmpty: {
+									message: 'The Pin Code is required and cannot be empty'
+								}
+							}
+						},
+						dob: {
+							validators: {
+								notEmpty: {
+									message: 'The Date of Birth is required and cannot be empty'
+								},
+								date: {
+									message: 'The Date is invalid. Valid date is January 1, 1998 or before',
+									format: 'MM/DD/YYYY',
+									max: '01/01/1998'
+								}
+							}
+						}
+					}
+				})
+
+$('#form2').bootstrapValidator({
+	feedbackIcons: {
+		valid: 'glyphicon glyphicon-ok',
+		invalid: 'glyphicon glyphicon-remove',
+		validating: 'glyphicon glyphicon-refresh'
+	},
+	row: {
+		valid: 'field-success',
+		invalid: 'field-error'
+	},
+	fields: 
+	{
+		xboard: {
+			validators: {
+				notEmpty: {
+					message: 'The Xth Board is required and cannot be empty'
+				}
+			}
+		},
+		xiiboard: {
+			validators: {
+				notEmpty: {
+					message: 'The XIIth Board is required and cannot be empty'
+				}
+			}
+		},
+		xyear: {
+			validators: {
+				notEmpty: {
+					message: 'The Xth Passing Year is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9]+$/,
+					message: 'The Year should be numeric'
+				},
+				between: {
+					min: 1000,
+					max: 9999,
+					message: 'Year should be between of type YYYY'
+				}
+			}
+		},
+		xiiyear: {
+			validators: {
+				notEmpty: {
+					message: 'The XIIth Passing Year is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9]+$/,
+					message: 'The Year should be numeric'
+				},
+				between: {
+					min: 1000,
+					max: 9999,
+					message: 'Year should be between of type YYYY'
+				}
+			}
+		},
+		xiimark: {
+			validators: {
+				notEmpty: {
+					message: 'The XIIth Passing % is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The % should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 100,
+					message: 'The % should be between 0 and 100'
+				}
+			}
+		},
+		xmark1: {
+			validators: {
+				notEmpty: {
+					message: 'The Xth Passing CGPA is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The CGPA should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 10,
+					message: 'CGPA should be between 0 and 10'
+				}
+			}
+		},
+		xmark2: {
+			enabled: false,
+			validators: {
+				notEmpty: {
+					message: 'The Xth Passing % is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The % should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 100,
+					message: '% should be between 0 and 100'
+				}
+			}
+		},
+		degree: {
+			validators: {
+				notEmpty: {
+					message: 'The Graduation Degree is required and cannot be empty'
+				}
+			}
+		},
+		discipline: {
+			validators: {
+				notEmpty: {
+					message: 'The Graduation Discipline is required and cannot be empty'
+				}
+			}
+		},
+		gradstate: {
+			validators: {
+				notEmpty: {
+					message: 'The Graduation State is required and cannot be empty'
+				}
+			}
+		},
+		collegename: {
+			validators: {
+				notEmpty: {
+					message: 'The Graduation College name is required and cannot be empty'
+				}
+			}
+		},
+		universityname: {
+			validators: {
+				notEmpty: {
+					message: 'The Graduation University name is required and cannot be empty'
+				}
+			}
+		},
+		collegecity: {
+			validators: {
+				notEmpty: {
+					message: 'The Graduation City is required and cannot be empty'
+				}
+			}
+		},
+		gradyear: {
+			validators: {
+				notEmpty: {
+					message: 'The Graduation Passing year is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9]+$/,
+					message: 'The Graduation year should be numeric'
+				},
+				between: {
+					min: 1000,
+					max: 9999,
+					message: 'Graduation Year should be of type YYYY'
+				}
+			}
+		},
+		gradmark1: {
+			validators: {
+				notEmpty: {
+					message: 'The Graduation Passing CGPA is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The CGPA should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 10,
+					message: 'CGPA should be between 0 and 10'
+				}
+			}
+		},
+		gradmark2: {
+			enabled: false,
+			validators: {
+				notEmpty: {
+					message: 'The Graduation Passing % is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The % should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 100,
+					message: '% should be between 0 and 100'
+				}
+			}
+		},
+		ece_pref1: {
+			validators: {
+				notEmpty: {
+					message: 'The Preference is required and cannot be empty'
+				}
+			}
+		},
+		ece_pref2: {
+			validators: {
+				notEmpty: {
+					message: 'The Preference is required and cannot be empty'
+				}
+			}
+		},
+		ece_pref3: {
+			validators: {
+				notEmpty: {
+					message: 'The Preference is required and cannot be empty'
+				}
+			}
+		},
+		pgcollege: {
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation College is required and cannot be empty'
+				}
+			}
+		},
+		pgcity: {
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation City is required and cannot be empty'
+				}
+			}
+		},
+		pgstate: {
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation State is required and cannot be empty'
+				}
+			}
+		},
+		pgdiscipline: {
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation Discipline is required and cannot be empty'
+				}
+			}
+		},
+		pgdegree: {
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation Degree is required and cannot be empty'
+				}
+			}
+		},
+		pgthesis: {
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation Thesis is required and cannot be empty'
+				}
+			}
+		},
+		pgyear: {
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation Passing year is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9]+$/,
+					message: 'The Post Graduation year should be numeric'
+				},
+				between: {
+					min: 1000,
+					max: 9999,
+					message: 'Post Graduation Year should be of type YYYY'
+				}
+			}
+		},
+		pgmark1: {
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation Passing CGPA is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The CGPA should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 10,
+					message: 'CGPA should be between 0 and 10'
+				}
+			}
+		},
+		pgmark2: {
+			enabled: false,
+			validators: {
+				notEmpty: {
+					message: 'The Post Graduation Passing % is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The % should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 100,
+					message: '% should be between 0 and 100'
+				}
+			}
+		},
+		otherexam: {
+			validators: {
+				notEmpty: {
+					message: 'The Exam name is required and cannot be empty'
+				}
+			}
+		},
+		othersubject: {
+			validators: {
+				notEmpty: {
+					message: 'The Subject is required and cannot be empty'
+				}
+			}
+		},
+		otherscore: {
+			validators: {
+				notEmpty: {
+					message: 'The Score is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The Score should be numeric'
+				}
+			}
+		},
+		otheryear: {
+			validators: {
+				notEmpty: {
+					message: 'The Year is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9]+$/,
+					message: 'The Year should be numeric'
+				},
+				between: {
+					min: 1000,
+					max: 9999,
+					message: 'The Year should be of type YYYY'
+				}
+			}
+		},
+		gatearea: {
+			validators: {
+				notEmpty: {
+					message: 'The Gate Area is required and cannot be empty'
+				}
+			}
+		},
+		gateyear: {
+			validators: {
+				notEmpty: {
+					message: 'The Gate Year is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9]+$/,
+					message: 'The Year should be numeric'
+				},
+				between: {
+					min: 1000,
+					max: 9999,
+					message: 'The Year should be of type YYYY'
+				}
+			}
+		},
+		gatemark: {
+			validators: {
+				notEmpty: {
+					message: 'The Gate Marks are required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The Marks should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 100,
+					message: 'The Marks should be between 0 - 100'	
+				}
+			}
+		},
+		gatescore: {
+			validators: {
+				notEmpty: {
+					message: 'The Score is required and cannot be empty'
+				},
+				regexp: {
+					regexp: /^[0-9.]+$/,
+					message: 'The Score should be numeric'
+				},
+				between: {
+					min: 0,
+					max: 1000,
+					message: 'The Score should be between 0 - 1000'	
+				}
+			}
+		},
+		cv: {
+			validators: {
+				notEmpty: {
+					message: 'Please Upload your CV'
+				}
+			}
+		},
+		sop: {
+			validators: {
+				notEmpty: {
+					message: 'Please Upload your CV'
+				}
+			}
+		}
+	}
+})
+
+.on('keyup', '[name="xmark1"], [name="xmark2"]', function(e) {
+	var xmark2 = $('#form2').find('[name="xmark2"]').val();
+	var xmark1 = $('#form2').find('[name="xmark1"]').val();
+	var fv = $('#form2').data('bootstrapValidator');
+
+	switch ($(this).attr('name')) {
+// User is focusing the xmark1 field
+case 'xmark1':
+fv.enableFieldValidators('xmark2', xmark1 === '').revalidateField('xmark2');
+
+if (xmark1 && fv.getOptions('xmark1', null, 'enabled') === false) {
+	fv.enableFieldValidators('xmark1', true).revalidateField('xmark1');
+} else if (xmark1 === '' && xmark2 !== '') {
+	fv.enableFieldValidators('xmark1', false).revalidateField('xmark1');
+}
+break;
+
+// User is focusing the drivers license field
+case 'xmark2':
+if (xmark2 === '') {
+	fv.enableFieldValidators('xmark1', true).revalidateField('xmark1');
+} else if (xmark1 === '') {
+	fv.enableFieldValidators('xmark1', false).revalidateField('xmark1');
+}
+
+if (xmark2 && xmark1 === '' && fv.getOptions('xmark2', null, 'enabled') === false) {
+	fv.enableFieldValidators('xmark2', true).revalidateField('xmark2');
+}
+break;
+
+default:
+break;
+}
+})
+.on('keyup', '[name="gradmark1"], [name="gradmark2"]', function(e) {
+	var gradmark2 = $('#form2').find('[name="gradmark2"]').val();
+	var gradmark1 = $('#form2').find('[name="gradmark1"]').val();
+	var fv = $('#form2').data('bootstrapValidator');
+
+	switch ($(this).attr('name')) {
+// User is focusing the gradmark1 field
+case 'gradmark1':
+fv.enableFieldValidators('gradmark2', gradmark1 === '').revalidateField('gradmark2');
+
+if (gradmark1 && fv.getOptions('gradmark1', null, 'enabled') === false) {
+	fv.enableFieldValidators('gradmark1', true).revalidateField('gradmark1');
+} else if (gradmark1 === '' && gradmark2 !== '') {
+	fv.enableFieldValidators('gradmark1', false).revalidateField('gradmark1');
+}
+break;
+
+// User is focusing the drivers license field
+case 'gradmark2':
+if (gradmark2 === '') {
+	fv.enableFieldValidators('gradmark1', true).revalidateField('gradmark1');
+} else if (gradmark1 === '') {
+	fv.enableFieldValidators('gradmark1', false).revalidateField('gradmark1');
+}
+
+if (gradmark2 && gradmark1 === '' && fv.getOptions('gradmark2', null, 'enabled') === false) {
+	fv.enableFieldValidators('gradmark2', true).revalidateField('gradmark2');
+}
+break;
+
+default:
+break;
+}
+})
+.on('keyup', '[name="pgmark1"], [name="pgmark2"]', function(e) {
+	var pgmark2 = $('#form2').find('[name="pgmark2"]').val();
+	var pgmark1 = $('#form2').find('[name="pgmark1"]').val();
+	var fv = $('#form2').data('bootstrapValidator');
+
+	switch ($(this).attr('name')) {
+// User is focusing the pgmark1 field
+case 'pgmark1':
+fv.enableFieldValidators('pgmark2', pgmark1 === '').revalidateField('pgmark2');
+
+if (pgmark1 && fv.getOptions('pgmark1', null, 'enabled') === false) {
+	fv.enableFieldValidators('pgmark1', true).revalidateField('pgmark1');
+} else if (pgmark1 === '' && pgmark2 !== '') {
+	fv.enableFieldValidators('pgmark1', false).revalidateField('pgmark1');
+}
+break;
+
+// User is focusing the drivers license field
+case 'pgmark2':
+if (pgmark2 === '') {
+	fv.enableFieldValidators('pgmark1', true).revalidateField('pgmark1');
+} else if (pgmark1 === '') {
+	fv.enableFieldValidators('pgmark1', false).revalidateField('pgmark1');
+}
+
+if (pgmark2 && pgmark1 === '' && fv.getOptions('pgmark2', null, 'enabled') === false) {
+	fv.enableFieldValidators('pgmark2', true).revalidateField('pgmark2');
+}
+break;
+
+default:
+break;
+}
+})
+
+$(".choice1").click(function(){
+	$("#check1").collapse('toggle');
+})
+$(".choice2").click(function(){
+	$("#check2").collapse('toggle');
+})
+$(".choice3").click(function(){
+	$("#check3").collapse('toggle');
+})
+$(".choice4").click(function(){
+	$("#check4").collapse('toggle');
+})
+
+$("#cvUpload").click(function(){
+	event.preventDefault();
+	var form = $("#form4");
+
+	form.ajaxSubmit({
+// You can change the url option to desired target
+url: form.attr('action'),
+type: form.attr('method'),
+dataType: 'json',
+success: function(responseText, statusText, xhr, $form) {
+	alert("Successfully Uploaded");
+}
+});
+})
+
+$("#sopUpload").click(function(){
+	event.preventDefault();
+	var form = $("#form5");
+
+	form.ajaxSubmit({
+// You can change the url option to desired target
+url: form.attr('action'),
+type: form.attr('method'),
+dataType: 'json',
+success: function(responseText, statusText, xhr, $form) {
+	alert("Successfully Uploaded");
+}
+});
+})
+
+$("#pdSubmit").click(function(event){
+	event.preventDefault();
+	var form = $("#form1");
+
+	form.data('bootstrapValidator').validate();
+
+	if(form.data('bootstrapValidator').isValid())
+	{
+		$.ajax({
+			type: form.attr('method'),
+			url: form.attr('action'),
+			data: form.serialize(),
+			success: function(result) {
+				alert("Successfully Submitted");
+			}
+		});
+	}
+})
+
+$("#eiSubmit").click(function(event){
+	event.preventDefault();
+	var form = $('#form2');
+
+	form.data('bootstrapValidator').validate();
+
+	if(form.data('bootstrapValidator').isValid())
+	{
+		$.ajax({
+			type: form.attr('method'),
+			url: form.attr('action'),
+			data: form.serialize(),
+			success: function(result) {
+				alert("Successfully Submitted");
+				$('#finalSubmit').attr('disabled',false);
+			}
+		});
+	}
+})
+
+$("#finalSubmit").click(function(event){
+
+	var form = $("#form3");
+
+	form.data('bootstrapValidator').validate();
+
+	$.ajax({
+			type: form.attr('method'),
+			url: form.attr('action'),
+			data: form.serialize(),
+			success: function(result) {
+				alert("Successfully Submitted");
+			}
+		});
+})
+
+$("#check1").on('hide.bs.collapse', function(){
+	$('#form2').data('bootstrapValidator').resetField('ece_pref1',true);
+	$('#form2').data('bootstrapValidator').resetField('ece_pref2',true);
+	$('#form2').data('bootstrapValidator').resetField('ece_pref3',true);
+})
+
+$("#check2").on('hide.bs.collapse', function(){
+	$('#form2').data('bootstrapValidator').resetField('pgcollege',true);
+	$('#form2').data('bootstrapValidator').resetField('pgcity',true);
+	$('#form2').data('bootstrapValidator').resetField('pgstate',true);
+	$('#form2').data('bootstrapValidator').resetField('pgdiscipline',true);
+	$('#form2').data('bootstrapValidator').resetField('pgdegree',true);
+	$('#form2').data('bootstrapValidator').resetField('pgthesis',true);
+	$('#form2').data('bootstrapValidator').resetField('pgyear',true);
+	$('#form2').data('bootstrapValidator').resetField('pgmark1',true);
+	$('#form2').data('bootstrapValidator').resetField('pgmark2',true);	
+})
+
+$("#check3").on('hide.bs.collapse', function(){
+	$('#form2').data('bootstrapValidator').resetField('otherexam',true);
+	$('#form2').data('bootstrapValidator').resetField('othersubject',true);
+	$('#form2').data('bootstrapValidator').resetField('otheryear',true);
+	$('#form2').data('bootstrapValidator').resetField('otherscore',true);
+})
+
+$("#check4").on('hide.bs.collapse', function(){
+	$('#form2').data('bootstrapValidator').resetField('gatearea',true);
+	$('#form2').data('bootstrapValidator').resetField('gateyear',true);
+	$('#form2').data('bootstrapValidator').resetField('gatemark',true);
+	$('#form2').data('bootstrapValidator').resetField('gatescore',true);
+})
+
+.on('err.field.fv', function(e, data) {
+	if (data.fv.getSubmitButton()) {
+		data.fv.disableSubmitButtons(false);
+	}
+})
+
+.on('success.field.fv', function(e, data) {
+if (data.fv.getInvalidFields().length > 0) {    // There is invalid field
+	data.fv.disableSubmitButtons(true);
+}
+});
+
+});
+</script>
+</body>
+</html>

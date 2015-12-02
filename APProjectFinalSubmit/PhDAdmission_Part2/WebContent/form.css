@@ -1,0 +1,114 @@
+.nav li {
+  	display: inline;
+}
+
+#custom-link a {
+    position: relative;
+    color: #5a5a5a;
+    font-size: 16px;
+  	font-weight: bold;
+  	padding: 14px 10px;
+  	text-transform: uppercase;
+  	text-decoration: none;
+  	top: 20px;
+  	left: 10px;
+  	right: 10px;
+}
+
+#custom-link a:hover {
+  	color: #3fadab;
+  	text-decoration: none;
+}
+
+.form-design{
+  position: relative;
+  background-color: #3fadab;
+  top: 20px;
+  padding-bottom: 100px;
+  border-radius: 10px;
+}
+
+.form-design p{
+  position: relative;
+  font-weight: bold;
+  top: 60px;
+  padding-left: 195px;
+  color: black;
+}
+
+.form-design-1 h2{
+  position: relative;
+  text-decoration: underline;
+  font-weight: bold;
+  padding-left: 195px;
+  top: 50px;
+  color: black;
+}
+
+.form-design-1{
+  position: relative;
+  background-color: #3fadab;
+  top: 20px;
+  padding-bottom: 45px;
+  border-radius: 10px;
+}
+
+.form-design-1 p{
+  position: relative;
+  font-weight: bold;
+  top: 40px;
+  padding-left: 195px;
+  color: black;
+}
+
+#form1 {
+  position: relative;
+  top: 90px;
+  color: black;
+}
+
+#form2{
+  position: relative;
+  top: 50px;
+  color: black; 
+}
+
+#form4{
+  position: relative;
+  top: 50px;
+  color: black; 
+}
+
+#form5{
+  position: relative;
+  top: 50px;
+  color: black; 
+}
+
+#form3{
+  position: relative;
+  top: 43px;
+}
+
+#form-exp{
+  background-color: #808080;
+}
+
+.panel-body{
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.form-horizontal h2{
+  position: relative;
+  top: -1px; 
+}
+
+#or{
+  position: relative;
+  padding-left: 400px;
+  font-weight: bold;
+  color: black;
+}
