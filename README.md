@@ -1,4 +1,4 @@
-# PhD-Admission-Form
+# PhD-Admission-Website
 
 A PhD Admission website built using HTML5 and Java Servlets. I have also used JQuery for form validation.
 
