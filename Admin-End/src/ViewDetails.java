@@ -5,8 +5,6 @@
  * Anant Mittal(2014015)
  */
 
-package com.iiitd.ap.project;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

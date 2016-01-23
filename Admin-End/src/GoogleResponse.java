@@ -5,8 +5,6 @@
  * Anant Mittal(2014015)
  */
 
-package ap.iiitd.project;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -37,9 +35,9 @@ public class GoogleResponse extends HttpServlet {
 		{
 			String code = request.getParameter("code");
 			String posturl = "code=" + code
-					+ "&client_id=1087657363483-b4v772aqoffrmtqes4q4ii70ntg7if9q.apps.googleusercontent.com"
-					+ "&client_secret=t7-dSmOcu_iUTHcdw3MFs7zd"
-					+ "&redirect_uri=http://localhost:8080/PhDAdmission_Part2/GoogleResponse"
+					+ "&client_id=579559240312-utr94hr01g1b2978jg3lcucp2og201td.apps.googleusercontent.com"
+					+ "&client_secret=ltNPV56801YwC7kQioCJvLHg"
+					+ "&redirect_uri=http://localhost:8080/FinalAPProject/GoogleResponse"
 					+ "&grant_type=authorization_code";
 
 			// post parameters
@@ -78,22 +76,22 @@ public class GoogleResponse extends HttpServlet {
 			reader.close();
 			
 			//For successful access
-			response.sendRedirect("/PhDAdmission_Part2/form.html");
+			response.sendRedirect("/FinalAPProject/index.html");
 
 		} 
 		catch (MalformedURLException e) 
 		{
 			//For denied access
-			response.sendRedirect("/PhDAdmission_Part2/UserRegister");
+			response.sendRedirect("/FinalAPProject/UserLogin");
 		}
 		catch (ProtocolException e) 
 		{
 			//For denied access
-			response.sendRedirect("/PhDAdmission_Part2/UserRegister");
+			response.sendRedirect("/FinalAPProject/UserLogin");
 		} catch (IOException e) 
 		{
 			//For denied access
-			response.sendRedirect("/PhDAdmission_Part2/UserRegister");
+			response.sendRedirect("/FinalAPProject/UserLogin");
 			
 		}
 	}

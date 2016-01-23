@@ -5,8 +5,6 @@
  * Anant Mittal(2014015)
  */
 
-package ap.iiitd.project;
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -17,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/UserLogin")
-public class UserLogin extends HttpServlet {
+public class AdminLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -38,8 +36,6 @@ response.setContentType("text/html");
 				"<div class=\"container\">" +
 				"<a href=\"https://www.iiitd.ac.in/\"><img class=\"pull-left\" src=\"iiitd-logo.jpg\" /></a>" +
 				"<ul class=\"pull-right\">" +
-				"<li><a href=\"main_page_user.html\">Home</a></li>" +
-				"<li><a href=\"/PhDAdmission_Part2/UserRegister\">Register</a></li>" +
 				"<li><a href=\"#\">FAQ</a></li>" +
 				"<li><a href=\"#\">Contact</a></li>" +
 				"</ul>" +
@@ -47,8 +43,8 @@ response.setContentType("text/html");
 				"</div>" +
 				"<div class = \"container\">" +
 				"<div class = \"design\">" +
-				"<h2> Login - Google Online Authentication </h2>" +
-				"<a href=\"https://accounts.google.com/o/oauth2/auth?scope=email%20profile&response_type=code&state=%2Fprofile&redirect_uri=http://localhost:8080/PhDAdmission_Part2/GoogleResponseViewForm&client_id=1087657363483-b4v772aqoffrmtqes4q4ii70ntg7if9q.apps.googleusercontent.com\"><img src=\"sign-in-with-google.png\" id=\"logo\"></a>" +
+				"<h2> Admin Login - Google Online Authentication </h2>" +
+				"<a href=\"https://accounts.google.com/o/oauth2/auth?scope=email%20profile&response_type=code&state=%2Fprofile&redirect_uri=http://localhost:8080/FinalAPProject/GoogleResponse&client_id=579559240312-utr94hr01g1b2978jg3lcucp2og201td.apps.googleusercontent.com\"><img src=\"sign-in-with-google.png\" id=\"logo\"></a>" +
 				"</div>" +
 				"</div>" +
 				"</body>" +
