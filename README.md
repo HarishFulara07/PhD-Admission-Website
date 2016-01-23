@@ -22,3 +22,9 @@ Note: I have used filesystem approach for maintaining the database rather than a
 4. Create a web project in Eclipse or Netbeans for admin end.
 5. Put all the servlet files inside repository's Admin-End src folder inside your web project's src folder.
 6. Put all the files inside repository's Admin-End WebContent folder inside your web project's WebContent folder.
+ 
+
+# Contributors
+
+Harish Fulara
+Anant Mittal
